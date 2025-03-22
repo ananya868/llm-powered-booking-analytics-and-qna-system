@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 ## **Usage**
 
-1. **To run, simply run the cmd** -
+1. **To run the Flask APP, simply run the cmd** -
 ```bash
 python main.py
 ```
@@ -67,10 +67,8 @@ Wait for server and dependant clients to load completely. You will see something
    
 ![A](data/misc/run.png)
 
-3. **API**:
+2. **API endpoints**:
    - Access the endpoints at http://127.0.0.1:5000 (or the specified port).
-
-4. **API endpoints**:
    - analytics/ - returns base64 encoded plots for various insights, trends, and patterns.
    - ask/  (requires parameter: query) - returns response using RAG engine based on pinecone vector db.
 
