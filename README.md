@@ -2,7 +2,9 @@
 
 ## Overview
 
-This project leverages Large Language Models (LLMs) to enhance booking analytics and facilitate a Question-and-Answer (Q&A) system. By integrating advanced natural language processing capabilities, the system aims to provide insightful analytics and an interactive Q&A interface for booking data.
+This project leverages open Large Language Models (LLMs) to enhance booking analytics and facilitate a Question-and-Answer (Q&A) system. By integrating advanced natural language processing capabilities, the system aims to provide insightful analytics and an interactive Q&A interface for booking data.
+
+LLM Used - Llama-3-70b 
 
 ## Features
 
@@ -29,6 +31,9 @@ Analytics -
   </tr>
 </table>
 
+## **NOTE**
+
+> The file 'test.ipynb' contains test runs for api endpoints
 
 ## **How to Setup** 
 
@@ -43,7 +48,7 @@ pip install -r requirements.txt
 ```
 3. Set up Environment Variables
    - Create an .env file inside the main dir
-   - put your groq api key along with already given pinecone api key into .env file:
+   - put your groq api key along with **already given pinecone api key** into .env file:
       - Your Groq AI api key (free to use at https://groq.com/)
       - Pinecone API key (Already filled)
       - ```
@@ -76,7 +81,7 @@ import requests
 import time
 import base64
 
-# Get Response
+# Analytics
 response = requests.post("http://127.0.0.1:5000/analytics")
 data = response.json()
 
@@ -89,6 +94,7 @@ def save_plots(save_path: str = "tests/analytics_plots/"):
 
 save_plot()
 
+# QNA 
 q1 = "What was the overall cancellation rate?"
 answer = requests.post("http://127.0.0.1:5000/ask", json={"query": q1})
 res = answer.json()
