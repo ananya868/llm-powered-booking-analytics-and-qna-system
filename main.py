@@ -9,6 +9,10 @@ import base64
 
 from flask import Flask, request, jsonify
 
+# Ignore Warnings
+import warnings
+warnings.filterwarnings("ignore")
+
 
 # Create Flask app
 app = Flask(__name__)
