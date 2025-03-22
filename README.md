@@ -2,7 +2,9 @@
 
 ## Overview
 
-This project leverages open Large Language Models (LLMs) to enhance booking analytics and facilitate a Question-and-Answer (Q&A) system. By integrating advanced natural language processing capabilities, the system aims to provide insightful analytics and an interactive Q&A interface for booking data.
+A system that processes hotel booking data, extracts insights, and enables
+retrieval-augmented question answering (RAG). The system should provide analytics as
+mentioned in below sections and answer user queries about the data.
 
 LLM Used - Llama-3-70b 
 
