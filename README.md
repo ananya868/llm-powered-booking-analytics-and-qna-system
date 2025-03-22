@@ -67,8 +67,8 @@ Wait for server and dependant clients to load completely. You will see something
    
 ![A](data/misc/run.png)
 
-3. **Interact with the QnA System**:
-   - Access the interactive interface at http://127.0.0.1:5000 (or the specified port).
+3. **API**:
+   - Access the endpoints at http://127.0.0.1:5000 (or the specified port).
 
 4. **API endpoints**:
    - analytics/ - returns base64 encoded plots for various insights, trends, and patterns.
