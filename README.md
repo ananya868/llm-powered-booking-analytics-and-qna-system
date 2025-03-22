@@ -87,9 +87,8 @@ response = requests.post("http://127.0.0.1:5000/analytics")
 data = response.json()
 
 # Save plots to save_path dir
-def save_plot(save_path: str = "tests/analytics_plots/"):
-    if not os.path.exists(save_path):
-        os.mkdir(save_path)
+def save_plot(save_path: str = "analytics_plots/"):
+    os.mkdir(save_path)
     for key, value in data.items():
         with open(f"{save_path}/{key}.png", "wb") as f:
             f.write(base64.b64decode(value))
